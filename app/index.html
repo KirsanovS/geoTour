@@ -1,0 +1,78 @@
+﻿<!doctype html>
+<html lang="en" ng-app="regApp"  >
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="style/animateStyle.css">
+	<link rel="stylesheet" href="style/style.css">
+	<script src="js/nativScipt.js"></script>
+	<script src="libs/gsap.js"></script> 
+	<script src="libs/jquery.js"></script> 	
+	<!-- for scroll -->
+	<link rel="stylesheet" href="libs/scroll/jquery.mCustomScrollbar.css">
+	<script src="libs/scroll/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="libs/scroll/setScroll.js"></script>		
+	<style> html, body{ height: 100%; } </style>
+ 
+	
+</head>
+<body  >
+ 
+  
+<div ng-controller="main" id="main" > 
+	<div id="container"> 
+		<div id="header" >
+			<img src="images/design/header2.jpg" alt="" id="imgHeader">	
+			<div id="contText">
+				<div id="headFogBlock" > </div>
+				<span id="headText" > Lema travel </span>
+				<span id="headTextLoz" >Когда ваш отдых - это наша работа</span>
+				<div id="headLine" > </div>
+				 
+			</div>
+		</div> 
+ 
+	 
+				<ul id="headerMenu"  >  
+					<li><a href="#!/main">Главная</a></li>
+					<li><a href="#!/game">О компании</a></li>
+					<li><a href="#!/form">Оформить заказ</a></li>
+					<li id="tours" ><a>Туры</a>
+						<ul id="toursUl"  >
+							<li ng-repeat="item in items" ><a ng-href="#!/page2/{{item.id}}" ng-bind="item.name" > </a></li>
+						</ul>
+					</li>
+		
+				</ul>
+ 
+			
+			
+			
+		<div ng-view ></div>
+		 
+		<div id="footer" >  
+			<img id="footImg" src="images/design/footer.jpg"/> 
+			<div id="footerInfo">
+				<ul>
+					<li>Information about company</li>
+					<li>Name company</li>
+					<li>Some information about company</li>
+					<li>Information about company</li>
+				</ul>
+			</div>
+		</div>
+			 
+ 	</div>	
+</div>
+
+</body>
+ 	<script src="angular/angular.js"></script>
+	<script src="angular/angular-route.js"></script>
+	<script src="angular/angular-animate.js"></script>
+	<script src="angular/angular-sanitize.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/route.js"></script>
+	<script src="js/services/cervicesItems.js"></script>
+	<script src="js/services/form.js"></script>
+	<script src="js/gsap/gsap.js"></script>
+</html>

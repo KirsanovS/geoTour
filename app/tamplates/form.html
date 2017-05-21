@@ -1,0 +1,18 @@
+﻿<div id='formPage' ng-controller="form"> 
+	<img  id="formImg" src="images/design/form.jpg" alt="" >
+	<form id='formZak' name="myForm" action="">
+		<label id="">Выберите тур: 
+			<select ng-model="sendObj.tour">
+				<option ng-repeat="item in items" value="{{item.name}}" ng-model="sendObj.tour" ng-bind="item.name" ></option>
+			</select>
+		</label>		
+		<label  >Ваше имя: <input type="text" ng-model="sendObj.name"   required /></label> 
+		<label id="">Ваша фамилия: <input type="text" ng-model="sendObj.lastName" required /></label> 
+		<label id="">Номер телефона: <input type="number" ng-model="sendObj.phone" /></label> 
+		<label id="">Ваш E-mail: <input type="email"  ng-model="sendObj.mail" required /></label> 
+		<label id="">Количиство человек: <input type="number" ng-model="sendObj.quantity" required /></label> 
+		<label id="">Дата прибытия: <input type="date" ng-model="sendObj.date" required /></label> 
+	    <label id=""> &nbsp <input type="button" value="Отправить" ng-click="sendForm(sendObj, myForm)" ng-disabled="myForm.$invalid" /> </label> 
+	</form>
+
+</div>
